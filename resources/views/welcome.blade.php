@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Soiree
+                    Soiree Test
                 </div>
             </div>
         </div>
