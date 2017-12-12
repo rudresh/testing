@@ -1,3 +1,24 @@
+# language: php
+
+# php:
+#   - 7.1
+
+# before_script:
+#   - export DISPLAY=:99.0
+#   - sh -e /etc/init.d/xvfb start
+#   - ./vendor/laravel/dusk/bin/chromedriver-linux &
+#   - cp .env.travis .env
+#   - php artisan serve &
+#   - mysql -e 'create database homestead_test;'
+#   - composer self-update
+#   - composer install --no-interaction
+#   - php artisan migrate
+
+# script:
+#   - php artisan key:generate
+#   - vendor/bin/phpunit
+#   - php artisan dusk
+
 sudo: required
 language: php
 dist: trusty
@@ -5,18 +26,17 @@ dist: trusty
 php:
   - 7.1
 
+install:
+  - travis_retry composer install --no-interaction
+
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - ./vendor/laravel/dusk/bin/chromedriver-linux &
   - cp .env.travis .env
   - php artisan serve &
-  - mysql -e 'create database homestead_test;'
-  - composer self-update
-  - composer install --no-interaction
   - php artisan migrate
 
 script:
   - php artisan key:generate
-  - vendor/bin/phpunit
   - php artisan dusk
