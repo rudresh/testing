@@ -51,8 +51,7 @@ class RequestSoireeTest extends TestCase
             'email' => 'kd@coloredcow.com',
             'name' => 'Nishanth KD'
         ]);
-        // $this->assertTrue($soiree->reject());
-        $this->assertTrue(false);
+        $this->assertTrue($soiree->reject());
     }
 
 
