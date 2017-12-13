@@ -39,7 +39,7 @@ class RequestSoireeTest extends TestCase
     public function testRequestApprove()
     {
         $soiree = RequestSoiree::create([
-            'email' => 'moohit@coloredcow.com',
+            'email' => 'mohit@coloredcow.com',
             'name' => 'Mohit'
         ]);
         $this->assertTrue($soiree->accept());
