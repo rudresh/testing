@@ -44,6 +44,9 @@
 sudo: required
 dist: trusty
 
+php:
+  - 7.1
+
 addons:
    chrome: stable
 
